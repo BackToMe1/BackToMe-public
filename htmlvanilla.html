@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Boutique exemple — intégration BackToMe</title>
+
+  <!--
+    Widget BackToMe : bouton de rétractation conforme à l'article L.221-21
+    du Code de la consommation (Ord. n°2026-2, obligation au 19 juin 2026).
+
+    Remplacez VOTRE_ID_MARCHAND par l'identifiant fourni dans votre tableau
+    de bord app.backtome.fr. Aucune autre étape n'est requise : le widget
+    détecte automatiquement les pages produit, panier et confirmation de
+    commande, et injecte le bouton aux emplacements conformes.
+  -->
+  <script
+    src="https://cdn.backtome.fr/widget.js"
+    data-merchant-id="VOTRE_ID_MARCHAND"
+    data-locale="fr"
+    defer
+  ></script>
+</head>
+
+<body>
+  <h1>Ma boutique en ligne</h1>
+
+  <!--
+    Optionnel : si vous souhaitez positionner le bouton à un endroit
+    précis (et non l'emplacement auto-détecté), ajoutez ce conteneur.
+    Le widget le détecte et y rend le bouton.
+  -->
+  <div data-backtome-button></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{%- comment -%}
+  BackToMe — intégration Shopify
+
+  À coller dans theme.liquid, juste avant la balise </head>.
+  Remplacez VOTRE_ID_MARCHAND par l'identifiant fourni dans
+  votre tableau de bord app.backtome.fr.
+
+  Le widget détecte automatiquement les templates 'product',
+  'cart' et 'checkout' et injecte le bouton de rétractation
+  conforme à l'article L.221-21 du Code de la consommation.
+
+  Multilingue : data-locale lit la langue active du theme Shopify
+  via {{ request.locale.iso_code }}, donc le bouton s'affiche
+  dans la langue du visiteur (FR, EN, DE, ES, IT, NL, PT, PL).
+{%- endcomment -%}
+
+<script
+  src="https://cdn.backtome.fr/widget.js"
+  data-merchant-id="VOTRE_ID_MARCHAND"
+  data-locale="{{ request.locale.iso_code }}"
+  data-platform="shopify"
+  data-shop-domain="{{ shop.permanent_domain }}"
+  defer
+></script>
+
+{%- comment -%}
+  Bouton de rétractation pré-positionné dans le footer.
+  Optionnel : si omis, le widget injecte automatiquement le
+  bouton à l'emplacement conforme détecté.
+{%- endcomment -%}
+
+<div data-backtome-button data-context="footer"></div>
