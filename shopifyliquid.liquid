@@ -1,32 +1,20 @@
 {%- comment -%}
-  BackToMe — intégration Shopify
+  BackToMe — intégration Shopify (méthode snippet)
+
+  Le plus simple sur Shopify est d'installer l'app BackToMe depuis l'App Store
+  (sans code). Cet exemple couvre l'alternative par snippet.
 
   À coller dans theme.liquid, juste avant la balise </head>.
-  Remplacez VOTRE_ID_MARCHAND par l'identifiant fourni dans
-  votre tableau de bord app.backtome.fr.
+  Remplacez VOTRE_SITE_ID par l'identifiant de site (data-site) affiché dans
+  le code d'installation de votre tableau de bord backtome.fr/dashboard.
 
-  Le widget détecte automatiquement les templates 'product',
-  'cart' et 'checkout' et injecte le bouton de rétractation
-  conforme à l'article L.221-21 du Code de la consommation.
-
-  Multilingue : data-locale lit la langue active du theme Shopify
-  via {{ request.locale.iso_code }}, donc le bouton s'affiche
-  dans la langue du visiteur (FR, EN, DE, ES, IT, NL, PT, PL).
+  Le bouton flottant s'affiche sur la vitrine ; sa position, ses couleurs, son
+  libellé et les pages d'affichage se règlent depuis le tableau de bord. La
+  langue s'adapte automatiquement à celle du visiteur (8 langues UE).
 {%- endcomment -%}
 
 <script
-  src="https://cdn.backtome.fr/widget.js"
-  data-merchant-id="VOTRE_ID_MARCHAND"
-  data-locale="{{ request.locale.iso_code }}"
-  data-platform="shopify"
-  data-shop-domain="{{ shop.permanent_domain }}"
+  src="https://backtome.fr/widget.js"
+  data-site="VOTRE_SITE_ID"
   defer
 ></script>
-
-{%- comment -%}
-  Bouton de rétractation pré-positionné dans le footer.
-  Optionnel : si omis, le widget injecte automatiquement le
-  bouton à l'emplacement conforme détecté.
-{%- endcomment -%}
-
-<div data-backtome-button data-context="footer"></div>
