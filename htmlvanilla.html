@@ -8,27 +8,22 @@
     Widget BackToMe : bouton de rétractation conforme à l'article L.221-21
     du Code de la consommation (Ord. n°2026-2, obligation au 19 juin 2026).
 
-    Remplacez VOTRE_ID_MARCHAND par l'identifiant fourni dans votre tableau
-    de bord app.backtome.fr. Aucune autre étape n'est requise : le widget
-    détecte automatiquement les pages produit, panier et confirmation de
-    commande, et injecte le bouton aux emplacements conformes.
+    Remplacez VOTRE_SITE_ID par l'identifiant de site (data-site) affiché dans
+    le code d'installation de votre tableau de bord backtome.fr/dashboard.
+
+    Aucune autre étape : le bouton flottant s'affiche sur vos pages. Sa
+    position, ses couleurs, son libellé et les pages d'affichage se règlent
+    depuis le tableau de bord. La langue s'adapte automatiquement à celle du
+    visiteur (FR, EN, DE, ES, NL, IT, PT, PL).
   -->
   <script
-    src="https://cdn.backtome.fr/widget.js"
-    data-merchant-id="VOTRE_ID_MARCHAND"
-    data-locale="fr"
+    src="https://backtome.fr/widget.js"
+    data-site="VOTRE_SITE_ID"
     defer
   ></script>
 </head>
 
 <body>
   <h1>Ma boutique en ligne</h1>
-
-  <!--
-    Optionnel : si vous souhaitez positionner le bouton à un endroit
-    précis (et non l'emplacement auto-détecté), ajoutez ce conteneur.
-    Le widget le détecte et y rend le bouton.
-  -->
-  <div data-backtome-button></div>
 </body>
 </html>
